@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { WeatherService } from "../services/weather.service";
 import { CommonModule } from "@angular/common";
+import {ServerMessageService} from "../services/server-message.service";
 
 @Component({
   selector: 'app-root',
@@ -11,15 +11,13 @@ import { CommonModule } from "@angular/common";
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  protected weatherData: any[] = [];
-
-  constructor(private weatherService: WeatherService) {
+  protected message: string = "";
+  constructor(private serverMessageService: ServerMessageService) {
   }
 
   ngOnInit(): void {
-    this.weatherService.getWeatherData().subscribe((data) => {
-      this.weatherData = data;
+    this.serverMessageService.getServerMessage().subscribe((serverMessage) => {
+      this.message = serverMessage;
     })
   }
-
 }
