@@ -39,11 +39,3 @@ Once both the backend and frontend are running, navigate to `http://localhost:42
 
 - **Backend**: Add new controllers, services, and models to the .NET project as needed.
 - **Frontend**: Modify Angular components, services, and modules to suit your application requirements.
-
-## Contributing
-
-Contributions to improve this template are welcome. Please ensure to follow the existing code structure and maintain consistency in coding standards.
-
-## License
-
-[Your chosen license]
